@@ -1,52 +1,42 @@
-
+html {
+    position: relative;
+    min-height: 100%;
+}
 
 body {
-	margin: 0;
+    margin: 0 0 100px auto;
 	padding: 0;
-	background-color: 	#eeeeee;
+    background-image: url("../images/witewall_3.png");
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 	color: #777777;
-
 }
 
-
-h1 {
-	margin: 0;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 7px;
-	padding-top: 7px;
-	font-family: 'Georgia', Times, "Times New Roman", serif;
-	color: #ffffff;
-
-}
-
-
-.name {
-	margin: 0;
-	padding: 0;
-	background-color: #4aaaa5;
-	float: left;
-}
-
-
-.header {
+header {
 	border-bottom-style: solid;
 	border-color: #cccccc;
-	background: #fff;
+	background: #ffffff;
+    margin-bottom: 25px;
 }
 
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+header h1 {
+    
+	font-family: "Georgia", "Times New Roman", serif;
+    background-color: #4aaaa5;
+	color: #ffffff;
+    float: left;
+    text-align: center;
+    margin: 0;
+    padding: 7px;
+
 }
+
 
 ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+    height: 50px;
 	overflow: hidden;
 }
 
@@ -68,28 +58,29 @@ li a:hover {
 	background-color: #dddddd;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
-
-
-.content {
+main, .content  {
 	width: 	960px;
 	margin: auto;
 }
-
 
 
 h2, h3 {
 	color: #4aaaa5;
 	border-bottom-style: solid;
 	border-color: #dddddd;
-	font-family: 'Georgia', Times, "Times New Roman", serif;
+	font-family: "Georgia", "Times New Roman", serif;
 	padding-bottom: 10px;
-
 }
 
-.contentleft {
+section {
 	width: 	610px;
-	background: #fff;
+	background: #ffffff;
 	float: left;
 	padding: 20px;
 	border-style: solid;
@@ -97,13 +88,12 @@ h2, h3 {
 	border-width: 1px;
 }
 
-.profileimg {
-	float: left;
-	margin: 0 10px 10px 10px;
+section img {
+	margin: 0 30px 30px 0;
 }
 
 
-.sidebar {
+aside {
 	width: 	250px;
 	background: #fff;
 	float: right;
@@ -115,13 +105,15 @@ h2, h3 {
 
 
 
-.footer {
-	align-content: center;
-	background-color: 	#666666;
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+	background-color: #666666;
 	color: #dddddd;
 	font-size: 0.8em;
-	height: 40px;
-	text-align: center;
 	border-top-style: solid;
 	border-color: #4aaaa5;
 	border-width: 6px;
@@ -129,12 +121,6 @@ h2, h3 {
 
 }
 
-
-
-.cborder {
-	border-style: solid;
-	border-color: #dddddd;
-}
 
 input[type=text], select {
     width: 100%;
@@ -165,68 +151,126 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
 }
+.image1 {
+    float: left;
+}
+
+.image2 {
+    display:none;
+}
+.image3 {
+    display:none;
+}
+
+
+.portfolio {
+    position: relative;    
+    margin:0;
+    padding: 0;
+    float:left;
+    margin-left: 20px
+}
+
+.portfolio p {
+    
+    position: absolute;
+    margin: 0;
+    top:200px ;
+    width:250px;
+    text-align: center;
+    background-color:  #4aaaa5;
+    color: #ffffff;
+    font-size: 1.5em;
+    height:1.5em;
+    padding-top: 5px
+    
+    
+}
 
 
 @media screen and (max-width: 980px) {
 
-	.contentleft {
+	section {
 	width: 	400px;
 	}
 
-	.sidebar {
+	aside {
 	width: 	200px;
 	}
 
-	.content {
+	main, .content {
 		width: 	700px;
 	}
-
+    
 }
 
 @media screen and (max-width: 768px) {
 
-	.contentleft {
+	section {
 	width: 	600px;
 	float: none;
 	}
 
-	.sidebar {
+	aside {
 	width: 	600px;
 	float:none;
 	margin-top: 50px;
 	padding: 20px;
 	}
 
-	.content {
+	main, .content {
 		width: 	668px;
 	}
 
+    .image3 {
+        display: block;
+
+    }
+    .image1 {
+        display: none;
+    }
+    
 }
 
 @media screen and (max-width: 640px) {
 
 
-	.contentleft {
+	section {
 	width: 	520px;
 	float: none;
 	}
+    .image2 {
+        display: block;
+        float: none;
+    }
+    
+    .image1 {
+        display: none;
+    }
+    
+    .image3 {
+        display: none;
+    }
 
-	.sidebar {
+	aside {
 	width: 	520px;
 	float:none;
 	margin-top: 50px;
 	padding: 20px;
 	}
 
-	.content {
+	main, .content {
 		width: 	600px;
 	}
 
-	.name {
+	header h1 {
 	display: none;
 	}
 	li {
 	float: left;
 	margin-left: 60px;
 	}
+
+    
 }
+
